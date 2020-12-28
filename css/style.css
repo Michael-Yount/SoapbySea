@@ -7,26 +7,33 @@ Dark green: #FDE84D
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: "IBM Plex Sans";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: rgb(99, 99, 99);
-    padding: 30px;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .header {
     height: 95vh;
     background-image: linear-gradient(
         to right bottom,
-         #85c3fd5d, #0E458C), 
+        #fde84d56, #0E458C), 
          url(/css/img/charSoapCloseUpHD.png);
     background-size: cover;
     background-position: top;
@@ -38,12 +45,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 50px;
+    height: 5rem;
 }
 
 .text-box {
@@ -57,17 +64,17 @@ body {
 .heading-primary {
     color: aliceblue;
     text-transform: uppercase;
-    text-shadow: 5px 5px 10px rgba(17, 11, 44, 0.788);
+    text-shadow: .5rem .8rem 1rem rgba(17, 11, 44, 0.788);
 
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 700;
-    letter-spacing: 20px;
+    letter-spacing: 2rem;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -76,9 +83,9 @@ body {
 
 .heading-primary-sub {
     display: block;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 600;
-    letter-spacing: 12px;
+    letter-spacing: 1.2rem;
 
     animation-name: moveInRight;
     animation-duration: 1s;
@@ -90,11 +97,11 @@ body {
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     90% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -107,11 +114,11 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     90% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -124,11 +131,11 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     90% {
-        transform: translatey(10px);
+        transform: translatey(1rem);
     }
 
     100% {
@@ -142,22 +149,22 @@ body {
     font-size: 1.25rem;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
 
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.425);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.425);
 }
 
 .btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.459);
+    transform: translateY(-.1rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.459);
 
 }
 
@@ -172,7 +179,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
