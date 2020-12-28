@@ -43,7 +43,7 @@ body {
 .heading-primary {
   color: #f4fbfd;
   text-transform: uppercase;
-  text-shadow: 0.5rem 0.8rem 1rem rgba(17, 11, 44, 0.788);
+  text-shadow: 0.5rem 0.8rem 1rem #0b0b2bbb;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
 
@@ -108,11 +108,11 @@ body {
 
 .btn:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.425); }
+  box-shadow: 0 1rem 3rem #0b0b2bbb; }
 
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.459); }
+  box-shadow: 0 1rem 1rem #0b0b2bbb; }
 
 .btn--white {
   background-color: aliceblue;
