@@ -1,16 +1,20 @@
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+// @import "base/base";
 
 
-$color-primary: #0e458ce3;
+
+$color-primary: #0e458c;
 $color-primary-light: #85C4FD;
 $color-primary-dark: #0c3257;
-$color-primary-honey:#fff28f6e;
+$color-primary-honey:#fff28f38;
 
 $color-gray-dark:#777;
-$color-white: rgb(244, 251, 253);
+$color-white:#fcfdff;
 
 $shadow-dark: #0b0b2bbb;
-
-
 
 *,
 *::after,
@@ -47,24 +51,30 @@ body {
 
 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100% );
-}
 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
-
-.header__logo {
-    height: 5rem;
-}
-
-.header__text--box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__logo {
+        height: 5rem;
+    }
+    
+    &__text--box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 .heading-primary {
@@ -74,31 +84,30 @@ body {
 
     backface-visibility: hidden;
     margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: 2rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 1.2rem;
+    
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    
+    }
 }
-
-.heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 700;
-    letter-spacing: 2rem;
-
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
-    display: block;
-    font-size: 3rem;
-    font-weight: 600;
-    letter-spacing: 1.2rem;
-
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-
-}
-
 
 @keyframes moveInLeft {
     0% {
@@ -150,8 +159,11 @@ body {
 
     }
 }
-.btn:link,
-.btn:visited {
+
+.btn {
+    &,
+    &:link,
+    &:visited {
     font-size: 1.25rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -160,49 +172,51 @@ body {
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
+    }
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 3rem ($shadow-dark);
 
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 1rem 1rem ($shadow-dark);
+    
+    }
+    
+    &--white {
+        background-color: $color-white;
+        color:$color-gray-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    
+    }
+    
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+  
 }
 
-.btn:hover {
-    transform: translateY(-.3rem);
-    box-shadow: 0 1rem 3rem ($shadow-dark);
-}
 
-.btn:active {
-    transform: translateY(-.1rem);
-    box-shadow: 0 1rem 1rem ($shadow-dark);
-
-}
-
-.btn--white {
-    background-color: aliceblue;
-    color:$color-gray-dark;
-
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn--white::after {
-    background-color: aliceblue;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.btn--animated {
-    animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards;
-}
