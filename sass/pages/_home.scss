@@ -1,0 +1,6 @@
+.section-about {
+    background-color: $color-gray-mid-1;
+    padding: 25rem;
+    //this is the parent vh - the bevel vh = 20vh (add the - to go upwards)
+    margin-top: -20vh;
+}
