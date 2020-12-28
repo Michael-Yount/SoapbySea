@@ -101,7 +101,6 @@
     "isarray": "^1.0.0",
     "isexe": "^2.0.0",
     "isstream": "^0.1.2",
-    "jquery": "^3.5.1",
     "js-base64": "^2.6.4",
     "jsbn": "^0.1.1",
     "json-schema": "^0.2.3",
