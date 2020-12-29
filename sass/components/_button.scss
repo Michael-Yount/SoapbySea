@@ -2,7 +2,7 @@
     &,
     &:link,
     &:visited {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -55,4 +55,29 @@
         animation-fill-mode: backwards;
     }
   
+}
+
+.btn-text {
+    &:link,
+    &:visited{
+        font-size: 1.6rem;
+        color: $color-primary-honey-solid;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary-honey-solid;
+        padding: 3px;
+    }
+
+    &:hover {
+        background-color: $color-primary-honey-solid;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .3);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 1rem 2rem rgba($color-black, .3);
+        transform: translateY(0);
+
+    }
 }

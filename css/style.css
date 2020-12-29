@@ -42,7 +42,7 @@ body {
   box-sizing: border-box; }
 
 body {
-  font-family: "IBM Plex Sans";
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
@@ -75,25 +75,41 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   display: inline-block;
-  background-image: linear-gradient(to right, #00d157, #0e458c);
+  background-image: linear-gradient(to right, #81d100, #0e458c);
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
+  letter-spacing: .5rem;
   transition-property: all .2s; }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(5deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-bottom-margin-8 {
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-mid {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom-big {
   margin-bottom: 8rem; }
 
 .btn, .btn:link, .btn:visited {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -134,6 +150,24 @@ body {
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #81d100;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #81d100;
+  padding: 3px; }
+
+.btn-text:hover {
+  background-color: #81d100;
+  color: #fcfdff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(0); }
 
 .section-about {
   background-color: #e6e6e6;

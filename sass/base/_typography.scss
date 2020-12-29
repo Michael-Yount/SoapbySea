@@ -1,7 +1,7 @@
 body {
-    font-family: "IBM Plex Sans";
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     line-height: 1.7;
     color:$color-gray-dark;
     padding: 2rem;
@@ -42,17 +42,31 @@ body {
 .heading-secondary {
     font-size: 3.5rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     display: inline-block;
     background-image: linear-gradient(to right, $color-primary-honey-solid, $color-primary);
     -webkit-background-clip: text;
     color: transparent;
-    letter-spacing: .2rem;
+    letter-spacing: .5rem;
     transition-property: all .2s;
 
     &:hover {
         transform: skewY(2deg) skewX(5deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color: #000000, $alpha: .3) ;
 
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
     }
 }
