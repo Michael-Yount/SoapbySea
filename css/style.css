@@ -108,6 +108,12 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .section-about {
   background-color: #e6e6e6;
   padding: 25rem;
@@ -124,8 +130,12 @@ body {
 
 .section-popular-soaps {
   background-color: #e6e6e6;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -12vh; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }
 
 .header {
   height: 95vh;
@@ -249,6 +259,12 @@ body {
   .btn--white::after {
     background-color: #fcfdff; }
 
+.btn--green {
+  background-color: #0e458c;
+  color: #fcfdff; }
+  .btn--green::after {
+    background-color: #0e458c; }
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -305,6 +321,10 @@ body {
       transform: rotateY(-180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #81d100, #0e458c); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
   .card:hover .card__side--back {
@@ -318,9 +338,9 @@ body {
     .card__picture--1 {
       background-image: url(/css/img/swirlSoap.png), linear-gradient(to right bottom, #ffb900, #ff7730); }
     .card__picture--2 {
-      background-image: url(/css/img/cameoSoap.png); }
+      background-image: url(/css/img/cameoSoap.png), linear-gradient(to right bottom, #2998ff, #5643fa); }
     .card__picture--3 {
-      background-image: url(/css/img/honeyOatmealLoaf.png); }
+      background-image: url(/css/img/honeyOatmealLoaf.png), linear-gradient(to right bottom, #81d100, rgba(122, 255, 34, 0.966)); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -336,7 +356,11 @@ body {
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone; }
     .card__heading-span--1 {
-      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, #81d100, #0e458c); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -349,3 +373,20 @@ body {
         padding: 1rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #e6e6e6; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    text-align: center;
+    color: #fcfdff;
+    margin-bottom: 5rem; }
+  .card__price-only {
+    font-size: 3rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100; }

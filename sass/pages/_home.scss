@@ -23,7 +23,12 @@
 
 .section-popular-soaps {
     background-color: $color-gray-mid-1;
-    padding: 25rem 0 50rem 0;
+    padding: 25rem 0 15rem 0;
     //this is the parent vh - the bevel vh = 20vh (add the - to go upwards)
     margin-top: -12vh;
+}
+
+.section-stories {
+    padding: 15rem 0;
+    background-color: $color-gray-light-1;
 }

@@ -27,7 +27,19 @@
             transform: rotateY(-180deg);
 
             &-1 {
-                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+                background-image: linear-gradient(to right bottom,
+                 $color-secondary-light, $color-secondary-dark);
+
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom,
+             $color-tertiary-light, $color-tertiary-dark);
+
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-primary-honey-solid, $color-primary);
 
             }
 
@@ -57,11 +69,11 @@
         }
 
         &--2 {
-            background-image: url(/css/img/cameoSoap.png);
+            background-image: url(/css/img/cameoSoap.png), linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
         }
 
         &--3 {
-            background-image: url(/css/img/honeyOatmealLoaf.png);
+            background-image: url(/css/img/honeyOatmealLoaf.png), linear-gradient(to right bottom, $color-primary-honey-solid, $color-gradient-bright);
         }
         
     }
@@ -82,12 +94,23 @@
         padding: 1rem 1.5rem;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
+
         &--1 {
             background-image: linear-gradient(to right bottom,
-             rgba($color-secondary-light,.8),
-             rgba($color-secondary-dark, .8));
-            // background-image: linear-gradient(to right bottom, 
-            // $color-secondary-light, $color-secondary-dark);
+             rgba($color-secondary-light, 1),
+             rgba($color-secondary-dark, 1));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-tertiary-light, 1),
+             rgba($color-tertiary-dark, 1));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-primary-honey-solid, 1),
+             rgba($color-primary, 1));
         }
     }
 
@@ -108,5 +131,31 @@
                 }
             }
         }
+    }
+
+    //back side styling
+    &__cta {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 5rem;
+    }
+
+    &__price-only {
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
