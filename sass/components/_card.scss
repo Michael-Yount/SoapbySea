@@ -2,11 +2,11 @@
     perspective: 100rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 50rem;
+    height: 52rem;
 
 
     &__side {
-         height: 50rem;
+         height: 52rem;
          transition: all .5s ease;
          position: absolute;
          top: 0;
@@ -14,14 +14,17 @@
          width: 100%;
          backface-visibility: hidden;
          border-radius: 1rem;
+         //this will be sure to round the corners because adding the image made them square
+         overflow: hidden;
          box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &--front {
             background-color:$color-white;
         }
 
+
         &--back {
-            transform: rotateY(180deg);
+            transform: rotateY(-180deg);
 
             &-1 {
                 background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
@@ -39,4 +42,71 @@
         transform: rotateY(0);
     }
 
+    //front side style 
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        //this creates an angle on the element
+        -webkit-clip-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+         
+
+        &--1 {
+            background-image: url(/css/img/swirlSoap.png), linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        }
+
+        &--2 {
+            background-image: url(/css/img/cameoSoap.png);
+        }
+
+        &--3 {
+            background-image: url(/css/img/honeyOatmealLoaf.png);
+        }
+        
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 50%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-secondary-light,.8),
+             rgba($color-secondary-dark, .8));
+            // background-image: linear-gradient(to right bottom, 
+            // $color-secondary-light, $color-secondary-dark);
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-gray-mid-1;
+                }
+            }
+        }
+    }
 }
