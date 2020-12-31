@@ -283,7 +283,8 @@ body {
 
 .btn-text:link, .btn-text:visited {
   font-size: 1.6rem;
-  color: #81d100;
+  background-image: linear-gradient(to bottom right, #ffb900, #ff7730);
+  color: #777;
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #81d100;
@@ -405,14 +406,33 @@ body {
     width: 15rem;
     height: 15rem;
     float: left;
-    background-color: orangered;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) translateY(-3rem) skewX(12deg); }
-  .story__image {
+    transform: translateX(-3rem) translateY(-3rem) skewX(12deg);
+    position: relative; }
+  .story__img {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    backface-visibility: hidden;
+    transform: translateX(-1.1rem) scale(1.4); }
   .story__text {
     transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fcfdff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -30%); }
+  .story:hover .story__img {
+    filter: blur(3px) brightness(50%); }

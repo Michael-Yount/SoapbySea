@@ -71,7 +71,8 @@
     &:link,
     &:visited{
         font-size: 1.6rem;
-        color: $color-primary-honey-solid;
+        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark );
+        color: $color-gray-dark;
         display: inline-block;
         text-decoration: none;
         border-bottom: 1px solid $color-primary-honey-solid;
