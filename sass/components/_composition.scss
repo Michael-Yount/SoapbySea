@@ -28,7 +28,7 @@
         }
 
         &:hover {
-            outline: 1rem solid $color-primary-light;
+            outline: 1rem solid $color-tertiary-dark;
             transform: scale(1.25) translateY(-.5rem);
             box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
             z-index: 20;
