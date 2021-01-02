@@ -134,8 +134,22 @@ body {
   margin-top: -12vh; }
 
 .section-stories {
-  padding: 3rem 0;
-  background-color: #f7f7f7; }
+  position: relative;
+  padding: 3rem 0; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #fff28f38, #0e458c); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(252, 253, 255, 0.9) 0%, rgba(255, 242, 143, 0.9) 50%, transparent 50%), url(/css/img/charSoapCloseUpHD.png);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 2rem 10rem rgba(0, 0, 0, 0.8);
+  height: 40rem; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
 
 .header {
   height: 95vh;
@@ -436,3 +450,36 @@ body {
     transform: translate(-50%, -30%); }
   .story:hover .story__img {
     filter: blur(3px) brightness(50%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .35; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem;
+  border-radius: 2px;
+  background-color: rgba(252, 253, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block; }
+  .form__input__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #0e458c; }
+  .form__input::-webkit-input-placeholder {
+    color: #7777; }
