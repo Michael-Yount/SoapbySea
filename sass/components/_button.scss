@@ -10,6 +10,10 @@
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
+
+    //change for the button
+    border: none;
+    cursor: pointer;
     }
     &:hover {
         transform: translateY(-.3rem);
@@ -21,7 +25,9 @@
         }
     }
     
-    &:active {
+    &:active, 
+    &:focus {
+        outline: none;
         transform: translateY(-.1rem);
         box-shadow: 0 1rem 1rem ($shadow-dark);
     
